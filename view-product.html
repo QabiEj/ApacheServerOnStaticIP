@@ -1,5 +1,5 @@
 <?php 
-    include('includes/header.php');
+    include('includes/header.html');
 
     if(isset($_GET['id'])) {
         $product = $crud->read('products', ['column' => 'id', 'value' => $_GET['id']]);
@@ -21,9 +21,9 @@
                 $_SESSION['cart'][$id] = $cart_product;
             }
             //redirect
-            header('Location: cart.php');
+            header('Location: cart.html');
         } else {
-            header('Location: view-product.php?id='.$id);
+            header('Location: view-product.html?id='.$id);
         }
     }
 
@@ -62,4 +62,4 @@
     </div>
 </div>
 
-<?php include('includes/footer.php'); ?>
+<?php include('includes/footer.html'); ?>

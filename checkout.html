@@ -1,9 +1,9 @@
 <?php
-include('includes/header.php');
+include('includes/header.html');
 
 
 if (!isset($_SESSION['is_loggedin']) || $_SESSION['is_loggedin'] != 1) {
-    die('<div class="container my-4">Please <a href="login.php">login</a> first</div>');
+    die('<div class="container my-4">Please <a href="login.html">login</a> first</div>');
 }
 
 $errors = [];
@@ -65,7 +65,7 @@ if (isset($_POST['checkout_btn'])) {
             
             unset($_SESSION['cart']);
 
-            header('Location: index.php?action=checkout&status=1');
+            header('Location: index.html?action=checkout&status=1');
         } else {
             $errors[] = 'Something went wrong!';
         }
@@ -151,7 +151,7 @@ if (isset($_POST['checkout_btn'])) {
                 </form>
                 <br>
                 <div>
-                    <form action="charge.php" method="post">
+                    <form action="charge.html" method="post">
                         <input type="text" name="amount" value="<?= $totalPrice ?>" readonly />
                         <input type="submit" name="submit" value="Pay With Paypal">
                     </form>
@@ -162,4 +162,4 @@ if (isset($_POST['checkout_btn'])) {
     </div>
 </div>
 
-<?php include('includes/footer.php'); ?>
+<?php include('includes/footer.html'); ?>
