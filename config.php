@@ -6,8 +6,8 @@ use Omnipay\Omnipay;
 define('CLIENT_ID', 'AUlpyjRm4L4cm8Vj3oi9n-kZJxWAKz-vircJRReAXEONIHjy1ksLnzaoMqT0nQ9hxBCNDbwiuw51F9fw');
 define('CLIENT_SECRET', 'ENjLXeDP9hmrh0XrYNdodwxxmnQEFtPa17LLlfCp6yD-tYlcx0MrLFaafkVUHfuBmewUKtMhMwK5KTSy');
  
-define('PAYPAL_RETURN_URL', 'http://localhost/ApacheServerOnStaticIP/success.php');
-define('PAYPAL_CANCEL_URL', 'http://localhost/ApacheServerOnStaticIP/cancel.php');
+define('PAYPAL_RETURN_URL', '/success.php');
+define('PAYPAL_CANCEL_URL', '/cancel.php');
 define('PAYPAL_CURRENCY', 'EUR'); // set your currency here
  
 // Connect with the database

@@ -26,7 +26,7 @@ if(isset($_GET['action']) && ($_GET['action'] === 'logout')) {
     unset($_SESSION['is_loggedin']);
     unset($_SESSION['role']);
 
-    header('Location: http://localhost/ApacheServerOnStaticIP/');
+    header('Location: ../login.php');
 }
 ?>
 <!doctype html>
@@ -47,27 +47,27 @@ if(isset($_GET['action']) && ($_GET['action'] === 'logout')) {
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="http://localhost/ApacheServerOnStaticIP/dashboard/index.php">Dashboard</a>
+                        <a class="nav-link" href="../dashboard/index.php">Dashboard</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="http://localhost/ApacheServerOnStaticIP/dashboard/promotions/">Promotions</a>
+                        <a class="nav-link" href="../dashboard/promotions/">Promotions</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="http://localhost/ApacheServerOnStaticIP/dashboard/categories/">Categories</a>
+                        <a class="nav-link" href="../dashboard/categories/">Categories</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="http://localhost/ApacheServerOnStaticIP/dashboard/products/">Products</a>
+                        <a class="nav-link" href="../dashboard/products/">Products</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="http://localhost/ApacheServerOnStaticIP/dashboard/orders/">Orders</a>
+                        <a class="nav-link" href="../dashboard/orders/">Orders</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             more
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="http://localhost/ApacheServerOnStaticIP/shop.php">Shop</a></li>
-                            <li><a class="dropdown-item" href="http://localhost/ApacheServerOnStaticIP/dashboard/profile.php">Profile</a></li>
+                            <li><a class="dropdown-item" href="../shop.php">Shop</a></li>
+                            <li><a class="dropdown-item" href="../dashboard/profile.php">Profile</a></li>
                             <li><a class="dropdown-item" href="?action=logout">Sign out</a></li>
                         </ul>
                     </li>
