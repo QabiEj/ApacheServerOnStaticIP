@@ -1,6 +1,6 @@
 <?php
-    include('../includes/header.html'); 
-    include('../../classes/CRUD.html');
+    include('../includes/header.php'); 
+    include('../../classes/CRUD.php');
     
     $crud = new CRUD;
     $products = $crud->read('products');
@@ -9,7 +9,7 @@
         $product = $crud->read('products', ['column' => 'id', 'value' => $_GET['id']])[0];
         unlink('images/'.$product['image']);
         if($crud->delete('products', ['column' => 'id', 'value' => $_GET['id']])) {
-            header('Location: index.html');
+            header('Location: index.php');
         }
     }
 ?>
@@ -17,7 +17,7 @@
 <div class="dashboard my-5">
     <div class="container">
         <h3 class="mb-4">Products</h3>
-        <a href="create.html" class="btn btn-outline-primary mb-4">Create product</a>
+        <a href="create.php" class="btn btn-outline-primary mb-4">Create product</a>
         <?php if($products && count($products)): ?>
         <div class="card">
             <div class="card-body">
@@ -51,7 +51,7 @@
                                 <td><?= $product['name'] ?></td>
                                 <td><?= $product['price'] ?></td>
                                 <td>
-                                    <a href="edit.html?id=<?= $product['id'] ?>">Edit</a>
+                                    <a href="edit.php?id=<?= $product['id'] ?>">Edit</a>
                                     <a href="?action=delete&id=<?= $product['id'] ?>" onclick="return confirm('Are you sure?')">Delete</a>
                                 </td>
                             </tr>
@@ -65,4 +65,4 @@
     </div>
 </div>
 
-<?php include('../includes/footer.html'); ?>
+<?php include('../includes/footer.php'); ?>

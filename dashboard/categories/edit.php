@@ -1,6 +1,6 @@
 <?php 
-    include('../includes/header.html'); 
-    include('../../classes/CRUD.html');
+    include('../includes/header.php'); 
+    include('../../classes/CRUD.php');
     
     $crud = new CRUD;
     $category = $crud->read('categories', ['column' => 'id', 'value' => $_GET['id']] ,1);
@@ -16,11 +16,11 @@
         }
 
         if(empty($id)) {
-            header('Location: index.html');
+            header('Location: index.php');
         }
 
         if($crud->update('categories', ['name' => $name], ['column' => 'id', 'value' => $id]) === true) {
-            header('Location: index.html?action=update&status=success');
+            header('Location: index.php?action=update&status=success');
         } else {
             $errors = 'Something want wrong!';
         }
@@ -56,4 +56,4 @@
     </div>
 </div>
 
-<?php include('../includes/footer.html'); ?>
+<?php include('../includes/footer.php'); ?>

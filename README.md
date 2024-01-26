@@ -31,7 +31,7 @@ This is a fully featured eCommerce website developed in PHP. It provides an intu
 1. Clone the repository.
 2. Set up a local development server with PHP (like XAMPP, WAMP, or MAMP).
 3. Import the database to your MySQL server.
-4. Update the `classes/Database.html` file with your own database connection information and the config.html file with your PayPal client ID and secret and the return and cancel URLs for PayPal, in case if you want to make it yours.
+4. Update the `classes/Database.php` file with your own database connection information and the config.php file with your PayPal client ID and secret and the return and cancel URLs for PayPal, in case if you want to make it yours.
 5. Run the `composer require league/omnipay omnipay/paypal` command to set up the PayPal integration.
 6. Run the website on your local development server.
 
@@ -44,13 +44,13 @@ When ready, users can proceed to checkout where they need to provide shipping de
 The project uses an MVC (Model-View-Controller) architecture. PHP is used for server-side scripting, with HTML and CSS for the frontend.
 
 Key scripts include:
-- `index.html`: Displays the product catalog.
-- `login.html`: Manages user login functionality.
-- `cart.html`: Provides shopping cart functionality.
-- `checkout.html`: Handles the checkout process and PayPal payment.
-- `config.html`: Sets up the PayPal payment gateway and database connection.
-- `includes/header.html` and `includes/footer.html`: Contain HTML used across multiple pages.
-- `classes/CRUD.html`: Includes a CRUD (Create, Read, Update, Delete) class for database operations.
+- `index.php`: Displays the product catalog.
+- `login.php`: Manages user login functionality.
+- `cart.php`: Provides shopping cart functionality.
+- `checkout.php`: Handles the checkout process and PayPal payment.
+- `config.php`: Sets up the PayPal payment gateway and database connection.
+- `includes/header.php` and `includes/footer.php`: Contain HTML used across multiple pages.
+- `classes/CRUD.php`: Includes a CRUD (Create, Read, Update, Delete) class for database operations.
 
 ## Conclusion
 This eCommerce website offers a comprehensive solution for online shopping. With a broad range of features and secure PayPal integration, it offers a robust and user-friendly experience for customers. The codebase is well-structured and can be further customized as needed.

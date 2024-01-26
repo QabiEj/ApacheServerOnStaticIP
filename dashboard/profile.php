@@ -1,7 +1,7 @@
 <?php 
-    include('includes/header.html'); 
+    include('includes/header.php'); 
     
-    include('../classes/CRUD.html');
+    include('../classes/CRUD.php');
     $crud = new CRUD;
 
     $user = $crud->read('users', ['column' => 'id', 'value' => $_SESSION['id']], 1);
@@ -48,13 +48,13 @@
             if($crud->update('users', $data, ['column' => 'id', 'value' => $_SESSION['id']])) {
                 if(!empty($_FILES['image']['name'])) {
                     if(move_uploaded_file($_FILES['image']['tmp_name'], 'assets/avatars/'.time().$_FILES['image']['name'])) {
-                        header('Location: http://localhost/e-commerce/dashboard/profile.html');
+                        header('Location: http://localhost/ApacheServerOnStaticIP/dashboard/profile.php');
                     } else {
                         $errors[] = 'Something want wrong while uploading avatar image!';
                     }
                 }
 
-                header('Location: http://localhost/e-commerce/dashboard/profile.html');
+                header('Location: http://localhost/ApacheServerOnStaticIP/dashboard/profile.php');
             } else {
                 $errors[] = 'Something want wrong!'; 
             }
@@ -90,7 +90,7 @@
                 unset($_SESSION['is_loggedin']);
                 unset($_SESSION['role']);
 
-                header('Location: http://localhost/e-commerce/login.html');
+                header('Location: http://localhost/ApacheServerOnStaticIP/login.php');
             } 
         }
     }
@@ -162,4 +162,4 @@
     </div>
 </div>
 
-<?php include('includes/footer.html'); ?>
+<?php include('includes/footer.php'); ?>

@@ -1,5 +1,5 @@
 <?php 
-    include('includes/header.html'); 
+    include('includes/header.php'); 
 
     $errors = [];
 
@@ -60,7 +60,7 @@
                             <input type="password" name="password" id="password" class="form-control" placeholder="Enter your password" />
                         </div>
                         <button type="submit" name="login_btn" class="btn btn-sm btn-outline-primary">Login</button>
-                        <a href="register.html" class="btn btn-sm btn-link">Register</a>
+                        <a href="register.php" class="btn btn-sm btn-link">Register</a>
                     </form>
                 </div>
             </div>
@@ -69,4 +69,4 @@
 </div>
 
 
-<?php include('includes/footer.html'); ?>
+<?php include('includes/footer.php'); ?>

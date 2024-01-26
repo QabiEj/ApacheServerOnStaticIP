@@ -1,7 +1,7 @@
 <?php 
-include('includes/header.html'); 
+include('includes/header.php'); 
 
-include('../classes/CRUD.html');
+include('../classes/CRUD.php');
 $crud = new CRUD;
 
 $promotions = count($crud->read('promotions'));
@@ -80,4 +80,4 @@ if(isset($_SESSION['role'])) {
     </div>
 
 
-    <?php include('includes/footer.html'); ?>
+    <?php include('includes/footer.php'); ?>

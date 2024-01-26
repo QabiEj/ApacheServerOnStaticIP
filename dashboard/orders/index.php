@@ -1,7 +1,7 @@
 <?php 
-include('../includes/header.html'); 
+include('../includes/header.php'); 
 
-include('../../classes/CRUD.html');
+include('../../classes/CRUD.php');
 $crud = new CRUD;
 
 if(isset($_SESSION['role']) && $_SESSION['role'] == 'admin') {
@@ -51,4 +51,4 @@ if(isset($_SESSION['role']) && $_SESSION['role'] == 'admin') {
     </div>
 </div>
 
-<?php include('../includes/footer.html'); ?>
+<?php include('../includes/footer.php'); ?>

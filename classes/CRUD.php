@@ -1,6 +1,6 @@
 <?php
 
-include 'Database.html';
+include 'Database.php';
 
 class CRUD {
     private $mysqli;

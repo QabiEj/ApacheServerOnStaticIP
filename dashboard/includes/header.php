@@ -2,8 +2,8 @@
 session_start();
 
 $customer_pages = [
-    '/e-commerce/dashboard/index.html',
-    '/e-commerce/dashboard/orders/index.html'
+    '/e-commerce/dashboard/index.php',
+    '/e-commerce/dashboard/orders/index.php'
 ];
 
 $current_page = $_SERVER['SCRIPT_NAME'];
@@ -26,7 +26,7 @@ if(isset($_GET['action']) && ($_GET['action'] === 'logout')) {
     unset($_SESSION['is_loggedin']);
     unset($_SESSION['role']);
 
-    header('Location: http://localhost/e-commerce/');
+    header('Location: http://localhost/ApacheServerOnStaticIP/');
 }
 ?>
 <!doctype html>
@@ -40,34 +40,34 @@ if(isset($_GET['action']) && ($_GET['action'] === 'logout')) {
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container">
-            <a class="navbar-brand" href="index.html">eStore</a>
+            <a class="navbar-brand" href="index.php">eStore</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="http://localhost/e-commerce/dashboard/index.html">Dashboard</a>
+                        <a class="nav-link" href="http://localhost/ApacheServerOnStaticIP/dashboard/index.php">Dashboard</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="http://localhost/e-commerce/dashboard/promotions/">Promotions</a>
+                        <a class="nav-link" href="http://localhost/ApacheServerOnStaticIP/dashboard/promotions/">Promotions</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="http://localhost/e-commerce/dashboard/categories/">Categories</a>
+                        <a class="nav-link" href="http://localhost/ApacheServerOnStaticIP/dashboard/categories/">Categories</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="http://localhost/e-commerce/dashboard/products/">Products</a>
+                        <a class="nav-link" href="http://localhost/ApacheServerOnStaticIP/dashboard/products/">Products</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="http://localhost/e-commerce/dashboard/orders/">Orders</a>
+                        <a class="nav-link" href="http://localhost/ApacheServerOnStaticIP/dashboard/orders/">Orders</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             more
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="http://localhost/e-commerce/shop.html">Shop</a></li>
-                            <li><a class="dropdown-item" href="http://localhost/e-commerce/dashboard/profile.html">Profile</a></li>
+                            <li><a class="dropdown-item" href="http://localhost/ApacheServerOnStaticIP/shop.php">Shop</a></li>
+                            <li><a class="dropdown-item" href="http://localhost/ApacheServerOnStaticIP/dashboard/profile.php">Profile</a></li>
                             <li><a class="dropdown-item" href="?action=logout">Sign out</a></li>
                         </ul>
                     </li>

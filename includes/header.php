@@ -16,7 +16,7 @@
         $_SESSION['cart'] = [];
     }
 
-    include('classes/CRUD.html');
+    include('classes/CRUD.php');
     $crud = new CRUD;
 
 ?>
@@ -44,20 +44,20 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container">
-            <a class="navbar-brand" href="index.html">eStore</a>
+            <a class="navbar-brand" href="index.php">eStore</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="index.php">Home</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="shop.html">Shop</a>
+                <a class="nav-link" href="shop.php">Shop</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="cart.html">
+                <a class="nav-link" href="cart.php">
                     Cart
                     <?php if(isset($_SESSION['cart'])): ?>
                         (<?= count($_SESSION['cart']) ?>)
@@ -70,11 +70,11 @@
                     </a>
                     <ul class="dropdown-menu">
                         <?php if(!isset($_SESSION['is_loggedin']) || $_SESSION['is_loggedin'] != 1): ?>
-                        <li><a class="dropdown-item" href="login.html">Login</a></li>
-                        <li><a class="dropdown-item" href="register.html">Register</a></li>
+                        <li><a class="dropdown-item" href="login.php">Login</a></li>
+                        <li><a class="dropdown-item" href="register.php">Register</a></li>
                         <?php endif; ?>
                         <?php if(isset($_SESSION['is_loggedin']) && ($_SESSION['is_loggedin'] == 1)): ?>
-                        <li><a class="dropdown-item" href="dashboard/index.html">Dashboard</a></li>
+                        <li><a class="dropdown-item" href="dashboard/index.php">Dashboard</a></li>
                         <?php endif; ?>
                     </ul>
                 </li>
