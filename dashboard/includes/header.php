@@ -26,7 +26,7 @@ if(isset($_GET['action']) && ($_GET['action'] === 'logout')) {
     unset($_SESSION['is_loggedin']);
     unset($_SESSION['role']);
 
-    header('Location: ../login.php');
+    header('Location: ../index.php');
 }
 ?>
 <!doctype html>
