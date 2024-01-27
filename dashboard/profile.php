@@ -48,13 +48,13 @@
             if($crud->update('users', $data, ['column' => 'id', 'value' => $_SESSION['id']])) {
                 if(!empty($_FILES['image']['name'])) {
                     if(move_uploaded_file($_FILES['image']['tmp_name'], 'assets/avatars/'.time().$_FILES['image']['name'])) {
-                        header('Location: /profile.php');
+                        header('Location: http://butikuneo.live/dashboard/profile.php');
                     } else {
                         $errors[] = 'Something want wrong while uploading avatar image!';
                     }
                 }
 
-                header('Location: /profile.php');
+                header('Location: http://butikuneo.live/dashboard/profile.php');
             } else {
                 $errors[] = 'Something want wrong!'; 
             }
@@ -90,7 +90,7 @@
                 unset($_SESSION['is_loggedin']);
                 unset($_SESSION['role']);
 
-                header('Location: ../login.php');
+                header('Location: http://butikuneo.live/login.php');
             } 
         }
     }

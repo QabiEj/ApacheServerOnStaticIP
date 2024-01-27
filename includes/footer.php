@@ -12,7 +12,7 @@
             document.getElementById('search').addEventListener('keyup', (e) => {
                 switch(e.keyCode) {
                     case 13:
-                        window.location.href = `../shop.php?search=${e.target.value}`
+                        window.location.href = `http://butikuneo.live/shop.php?search=${e.target.value}`
                         break
                 }
             })
