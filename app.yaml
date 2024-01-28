@@ -22,11 +22,11 @@ entrypoint:
   serve handler.php
 
 env_variables:
-# Replace USER, PASSNORD, DATABASE, and CONNECTION_NAME with the
-# values obtained when configuring your Cloud SQL instance.
-CLOUDSQL_USER: root
-CLOUDSQL_DB: estore
-CLOUDSQL_PASSWORD: ensari12
-CLOUDSQL_DSN: /cloudsql/coherent-bay-411609:us-central1:quickstart-cloud-run-mysql-instance
+  # Replace USER, PASSWORD, DATABASE, and CONNECTION_NAME with the
+  # values obtained when configuring your Cloud SQL instance.
+  CLOUDSQL_USER: "root"
+  CLOUDSQL_DB: "estore"
+  CLOUDSQL_PASSWORD: "ensari12"
+  CLOUDSQL_DSN: "/cloudsql/coherent-bay-411609:us-central1:quickstart-cloud-run-mysql-instance"
 
 # [END gae_cloudsql_mysql_env]
