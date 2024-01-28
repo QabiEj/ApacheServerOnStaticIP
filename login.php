@@ -44,6 +44,7 @@
             }
         }
     }
+    ob_end_flush();
 ?>
 <!-- Login -->
 <div class="auth py-5">
@@ -72,6 +73,7 @@
         </div>
     </div>
 </div>
+
 
 
 <?php include('includes/footer.php'); ?>
