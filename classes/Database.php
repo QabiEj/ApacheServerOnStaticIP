@@ -5,7 +5,7 @@ class Database {
     private $connection = null;
 
     public function __construct() {
-        $this->connection = new mysqli('10.128.0.2', 'root', 'ensari12', 'estore');
+        $this->connection = new mysqli('10.128.0.2', 'root@localhost', 'ensari12', 'estore');
     }
 
     public static function getInstance() {
