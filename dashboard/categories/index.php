@@ -7,7 +7,7 @@
 
     if(isset($_GET['action']) && ($_GET['action'] === 'delete')) {
         if($crud->delete('categories', ['column' => 'id', 'value' => $_GET['id']])) {
-            header('Location: index.php');
+            header('Location: /index.php');
         }
     }
 ?>
@@ -16,7 +16,7 @@
     <div class="container">
 
         <h3 class="mb-4">Categories</h3>
-        <a href="create.php" class="btn btn-outline-primary mb-4">Create category</a>
+        <a href="/create.php" class="btn btn-outline-primary mb-4">Create category</a>
 
         <?php if($categories && count($categories)): ?>
         <div class="card">
@@ -45,7 +45,7 @@
                                 <td><?= $category['id'] ?></td>
                                 <td><?= $category['name'] ?></td>
                                 <td>
-                                    <a href="edit.php?id=<?= $category['id'] ?>">Edit</a>
+                                    <a href="/edit.php?id=<?= $category['id'] ?>">Edit</a>
                                     <a href="?action=delete&id=<?= $category['id'] ?>" onclick="return confirm('Are you sure?')">Delete</a>
                                 </td>
                             </tr>

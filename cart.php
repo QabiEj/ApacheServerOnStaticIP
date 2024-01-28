@@ -7,7 +7,7 @@ include('includes/header.php');
 
 if (isset($_GET['action']) && ($_GET['action'] === 'emptycart')) {
     unset($_SESSION['cart']);
-    header('Location: index.php');
+    header('Location: /index.php');
 }
 
 if (isset($_GET['action']) && ($_GET['action'] === 'minus')) {
@@ -20,7 +20,7 @@ if (isset($_GET['action']) && ($_GET['action'] === 'minus')) {
     } else {
         $_SESSION['cart'][$id] = $cart_product;
     }
-    header('Location: cart.php');
+    header('Location: /cart.php');
 }
 
 if (isset($_GET['action']) && ($_GET['action'] === 'plus')) {
@@ -28,7 +28,7 @@ if (isset($_GET['action']) && ($_GET['action'] === 'plus')) {
     $cart_product = $_SESSION['cart'][$id];
     $cart_product['qty'] = $cart_product['qty'] + 1;
     $_SESSION['cart'][$id] = $cart_product;
-    header('Location: cart.php');
+    header('Location: /cart.php');
 }
 ?>
 
@@ -103,7 +103,7 @@ if (isset($_GET['action']) && ($_GET['action'] === 'plus')) {
             <?php if (isset($_SESSION['is_loggedin']) && ($_SESSION['is_loggedin'] == 1)): ?>
                 <a href="checkout.php" class="btn btn-sm btn-outline-primary">Check out</a>
             <?php else: ?>
-                Please <a href="login.php">login</a> first
+                Please <a href="/login.php">login</a> first
             <?php endif; ?>
         </div>
     </div>

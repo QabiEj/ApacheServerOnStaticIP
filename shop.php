@@ -57,7 +57,7 @@
                                 ?> &euro;
                             <?php endif; ?>
                         </p>
-                        <a href="view-product.php?id=<?= $product['id'] ?>" class="btn btn-outline-secondary">
+                        <a href="/view-product.php?id=<?= $product['id'] ?>" class="btn btn-outline-secondary">
                             View product
                         </a>
                     </div>

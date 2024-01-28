@@ -32,7 +32,7 @@
             if(isset($image['name']) && imageIsValid($image['name'])) {
                 move_uploaded_file($image['tmp_name'], 'images/'.time().$image['name']);
             }
-            header('Location: index.php?action=create&status=success');
+            header('Location: /index.php?action=create&status=success');
         } else {
             $errors = 'Something want wrong!';
         }

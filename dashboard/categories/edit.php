@@ -16,11 +16,11 @@
         }
 
         if(empty($id)) {
-            header('Location: index.php');
+            header('Location: /index.php');
         }
 
         if($crud->update('categories', ['name' => $name], ['column' => 'id', 'value' => $id]) === true) {
-            header('Location: index.php?action=update&status=success');
+            header('Location: /index.php?action=update&status=success');
         } else {
             $errors = 'Something want wrong!';
         }

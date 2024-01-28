@@ -3,7 +3,7 @@ include('includes/header.php');
 
 
 if (!isset($_SESSION['is_loggedin']) || $_SESSION['is_loggedin'] != 1) {
-    die('<div class="container my-4">Please <a href="login.php">login</a> first</div>');
+    die('<div class="container my-4">Please <a href="/login.php">login</a> first</div>');
 }
 
 $errors = [];
@@ -65,7 +65,7 @@ if (isset($_POST['checkout_btn'])) {
             
             unset($_SESSION['cart']);
 
-            header('Location: index.php?action=checkout&status=1');
+            header('Location: /index.php?action=checkout&status=1');
         } else {
             $errors[] = 'Something went wrong!';
         }

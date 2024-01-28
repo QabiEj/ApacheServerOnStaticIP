@@ -75,7 +75,7 @@
                                 ?> &euro;
                             <?php endif; ?>
                         </p>
-                        <a href="view-product.php?id=<?= $product['id'] ?>" class="btn btn-outline-secondary">
+                        <a href="/view-product.php?id=<?= $product['id'] ?>" class="btn btn-outline-secondary">
                             View product
                         </a>
                     </div>
@@ -84,7 +84,7 @@
             <?php endforeach; ?>
         </div> <!-- ./row -->
         <div class="text-center mt-5">
-            <a href="shop.php" class="btn btn-sm btn-outline-primary">Shop page &rarr;</a>
+            <a href="/shop.php" class="btn btn-sm btn-outline-primary">Shop page &rarr;</a>
         </div>
     </div>
 </div>

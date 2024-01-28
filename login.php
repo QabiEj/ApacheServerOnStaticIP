@@ -36,7 +36,7 @@
                     $_SESSION['role'] = $user['role'];
     
                     // redirect
-                    header('Location: dashboard/');
+                    header('Location: /dashboard/');
                     
                 } else {
                     $errors[] = 'Username or/and password was incorrect!';
@@ -65,7 +65,7 @@
                             <input type="password" name="password" id="password" class="form-control" placeholder="Enter your password" />
                         </div>
                         <button type="submit" name="login_btn" class="btn btn-sm btn-outline-primary">Login</button>
-                        <a href="register.php" class="btn btn-sm btn-link">Register</a>
+                        <a href="/register.php" class="btn btn-sm btn-link">Register</a>
                     </form>
                 </div>
             </div>
