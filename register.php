@@ -44,7 +44,7 @@
     
             // insert user -> db: users
             if($crud->create('users', $data)) {
-                header('Location: login.php?action=register&status=1');
+                header('Location: /login.php?action=register&status=1');
             } 
         }
     }
@@ -85,7 +85,7 @@
                             <input type="password" name="password2" id="password" class="form-control" placeholder="Repeat your password" />
                         </div>
                         <button type="submit" name="register_btn" class="btn btn-sm btn-outline-primary">Register</button>
-                        <a href="login.php" class="btn btn-sm btn-link">Login</a>
+                        <a href="/login.php" class="btn btn-sm btn-link">Login</a>
                     </form>
                 </div>
             </div>
