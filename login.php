@@ -55,7 +55,7 @@
             <div class="col-lg-5 offset-lg-1 col-md-5 offset-md-1 col-sm-12 offset-sm-0 d-flex align-items-center">
                 <div class="login w-100">
                     <h2>Login</h2>
-                    <form action="<?= $_SERVER['PHP_SELF'] ?>" method="POST">
+                    <form action="/login.php" method="POST">
                         <div class="form-group my-4">
                             <label for="email">Email</label>
                             <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email" />
