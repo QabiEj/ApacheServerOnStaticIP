@@ -51,7 +51,7 @@
                     <?php endif; ?>
                 </p>
                 <p class="my-5 p-2" style="border: 1px solid #e3e3e3;"><?= $product['description'] ?></p>
-                <form action="<?= $_SERVER['PHP_SELF'] ?>" method="GET" class="d-flex align-items-center">
+                <form action="view-product.php" method="GET" class="d-flex align-items-center">
                     <input type="number" name="qty" id="qty" value="1" min="1" class="form-control me-4 w-25" max="<?= $product['qty'] ?>" />
                     <input type="hidden" name="id" value="<?= $product['id'] ?>">
                     <button type="submit" name="add_to_cart_btn" class="btn bnt-sm btn-outline-primary">Add to cart</button>

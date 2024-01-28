@@ -27,7 +27,7 @@
             </div>
             <div>
                 <!-- localhost/shop.php?filter=price_asc -->
-                <form action="<?= $_SERVER['PHP_SELF'] ?>" id="filter-form">
+                <form action="shop.php" id="filter-form">
                     <select name="filter" id="filter" class="form-control">
                         <option value="">Filter products &darr;</option>
                         <option value="name_asc" <?= (isset($_GET['filter']) && ($_GET['filter']==='name_asc')) ? 'selected' : '' ?>>Name ASC</option>
