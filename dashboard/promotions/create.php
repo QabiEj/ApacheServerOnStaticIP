@@ -58,7 +58,7 @@
                     <?php endforeach; ?>
                     </ul>
                 <?php endif; ?>
-                <form action="<?= $_SERVER['PHP_SELF'] ?>" method="POST" enctype="multipart/form-data">
+                <form action="/dashboard/promotions/create.php" method="POST" enctype="multipart/form-data">
                     <div class="form-group mb-4">
                         <label for="title">Title</label>
                         <input type="text" name="title" id="title" class="form-control" required="">

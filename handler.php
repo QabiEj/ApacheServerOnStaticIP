@@ -51,16 +51,16 @@ switch (@parse_url($_SERVER['REQUEST_URI'])['path']) {
         require __DIR__ . '/dashboard/index.php';
         break;
     case '/dashboard\profile.php':
-        require __DIR__ . '/dashboard\profile.php';
+        require __DIR__ . '/dashboard/profile.php';
         break;
     case '/classes\Cart.php':
-        require __DIR__ . '/classes\Cart.php';
+        require __DIR__ . '/classes/Cart.php';
         break;
     case '/classes\CRUD.php':
-        require __DIR__ . '/classes\CRUD.php';
+        require __DIR__ . '/classes/CRUD.php';
         break;
     case '/classes\Database.php':
-        require __DIR__ . '/classes\Database.php';
+        require __DIR__ . '/classes/Database.php';
         break;
     case '/dashboard/categories/create.php':
         require __DIR__ . '/dashboard/categories/create.php';

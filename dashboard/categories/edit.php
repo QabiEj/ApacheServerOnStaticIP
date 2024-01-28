@@ -40,7 +40,7 @@
                     </ul>
                 <?php endif; ?>
                 <?php if(isset($category) && is_array($category[0])): ?>
-                <form action="<?= $_SERVER['PHP_SELF'] ?>" method="POST">
+                <form action="/dashboard/categories/edit.php" method="POST">
                     <div class="form-group mb-4">
                         <label for="name">Name</label>
                         <input type="text" name="name" id="name" value="<?= $category[0]['name'] ?>" class="form-control" required="">

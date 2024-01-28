@@ -32,7 +32,7 @@
                     <?php endforeach; ?>
                     </ul>
                 <?php endif; ?>
-                <form action="<?= $_SERVER['PHP_SELF'] ?>" method="POST">
+                <form action="/dashboard/categories/create.php" method="POST">
                     <div class="form-group mb-4">
                         <label for="name">Name</label>
                         <input type="text" name="name" id="name" class="form-control" required="">
