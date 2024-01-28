@@ -3,9 +3,13 @@
 class Database {
     private static $instance = null;
     private $connection = null;
-
+    
     public function __construct() {
-        $this->connection = new mysqli('127.0.0.1', 'root', 'ensari12', 'estore');
+        $user = getenv('CLOUDSQL_USER');
+        $pass = getenv('CLOUDSQL_PASSWORD');
+        $inst = getenv('CLOUDSQL_DSN');
+        $dbname = getenv('CLOUDSQL_DB');
+        $this->connection = mysqli_connect(null, $user, $pass, $dbname, null, $inst);
     }
 
     public static function getInstance() {
