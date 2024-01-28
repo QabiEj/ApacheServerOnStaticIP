@@ -19,7 +19,7 @@ handlers:
   script: auto
 
 entrypoint:
-  serve index.php
+  serve handler.php
 
 env_variables:
   # Replace USER, PASSWORD, DATABASE, and CONNECTION_NAME with the

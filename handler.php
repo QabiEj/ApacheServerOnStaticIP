@@ -3,13 +3,42 @@ ini_set('allow_url_fopen', 1);
 
 switch (@parse_url($_SERVER['REQUEST_URI'])['path']) {
     case '/':
-        require 'index.php';
-        break;
     case '/index':
-        require 'index.php';
-        break;
     case '/index.php':
-        require 'index.php';
+        require __DIR__.'/index.php';
+        break;
+    // END: abpxx6d04wxr
+
+    // BEGIN: be15d9bcejpp
+    case '/cancel.php':
+        require __DIR__.'/cancel.php';
+        break;
+    case '/cart.php':
+        require __DIR__.'/cart.php';
+        break;
+    case '/charge.php':
+        require __DIR__.'/charge.php';
+        break;
+    case '/checkout.php':
+        require __DIR__.'/checkout.php';
+        break;
+    case '/config.php':
+        require __DIR__.'/config.php';
+        break;
+    case '/login.php':
+        require __DIR__.'/login.php';
+        break;
+    case '/register.php':
+        require __DIR__.'/register.php';
+        break;
+    case '/shop.php':
+        require __DIR__.'/shop.php';
+        break;
+    case '/success.php':
+        require __DIR__.'/success.php';
+        break;
+    case '/view-product.php':
+        require __DIR__.'/view-product.php';
         break;
     case '/classes/Cart.php':
         require __DIR__.'/classes/Cart.php';
@@ -62,39 +91,9 @@ switch (@parse_url($_SERVER['REQUEST_URI'])['path']) {
     case '/includes/header.php':
         require __DIR__.'/includes/header.php';
         break;
-    case '/cancel.php':
-        require 'cancel.php';
-        break;
-    case '/cart.php':
-        require 'cart.php';
-        break;
-    case '/charge.php':
-        require 'charge.php';
-        break;
-    case '/checkout.php':
-        require 'checkout.php';
-        break;
-    case '/config.php':
-        require 'config.php';
-        break;
-    case '/login.php':
-        require 'login.php';
-        break;
-    case '/register.php':
-        require 'register.php';
-        break;
-    case '/shop.php':
-        require 'shop.php';
-        break;
-    case '/success.php':
-        require 'success.php';
-        break;
-    case '/view-product.php':
-        require 'view-product.php';
-        break;
+
     default:
         http_response_code(404);
         echo @parse_url($_SERVER['REQUEST_URI'])['path'];
         exit('Not Found');
 }
-
