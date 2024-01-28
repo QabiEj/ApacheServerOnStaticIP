@@ -36,7 +36,7 @@
                     $_SESSION['role'] = $user['role'];
     
                     // redirect
-                    header('Location: /dashboard/');
+                    header('Location: /dashboard/index.php');
                     
                 } else {
                     $errors[] = 'Username or/and password was incorrect!';
