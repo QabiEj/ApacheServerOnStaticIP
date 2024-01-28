@@ -11,7 +11,11 @@ define('PAYPAL_CANCEL_URL', 'http://butikuneo.live/cancel.php');
 define('PAYPAL_CURRENCY', 'EUR'); // set your currency here
  
 // Connect with the database
-$db = new mysqli('127.0.0.1', 'root', 'ensari12', 'estore'); 
+$user = getenv('CLOUDSQL_USER');
+$pass = getenv('CLOUDSQL_PASSWORD');
+$inst = getenv('CLOUDSQL_DSN');
+$dbname = getenv('CLOUDSQL_DB');
+$db = mysqli_connect(null, $user, $pass, $dbname, null, $inst);
  
 if ($db->connect_errno) {
     die("Connect failed: ". $db->connect_error);
