@@ -64,7 +64,7 @@
                     </ul>
                 <?php endif; ?>
                 <?php if(isset($product) && is_array($product[0])): ?>
-                <form action="/edit.php" method="POST" enctype="multipart/form-data">
+                <form action="<?= $_SERVER['PHP_SELF'] ?>" method="POST" enctype="multipart/form-data">
                     <div class="form-group mb-4">
                         <label for="category">Category</label>
                         <select name="category" id="category" class="form-control">

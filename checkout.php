@@ -100,7 +100,7 @@ if (isset($_POST['checkout_btn'])) {
                         <?php endforeach; ?>
                     </ul>
                 <?php endif; ?>
-                <form action="/checkout.php" method="POST">
+                <form action="<?= $_SERVER['PHP_SELF'] ?>" method="POST">
                     <div class="form-group">
                         <label for="fullname my-2">Fullname</label>
                         <input type="text" name="fullname" id="fullname" class="form-control" placeholder="Fullname"

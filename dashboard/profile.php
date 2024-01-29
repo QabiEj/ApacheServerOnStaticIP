@@ -114,7 +114,7 @@
                 <h5>Update</h5>
             </div>
             <div class="card-body">
-                <form action="/profile.php" method="POST" enctype="multipart/form-data">
+                <form action="<?= $_SERVER['PHP_SELF'] ?>" method="POST" enctype="multipart/form-data">
                     <div class="mb-3">
                         <label for="name" class="form-label">Name</label>
                         <input type="text" name="name" class="form-control" id="name" required="" value="<?= $user['name'] ?>">
@@ -147,7 +147,7 @@
                 <h5>Change password</h5>
             </div>
             <div class="card-body">
-                <form action="profile.php" method="POST">
+                <form action="<?= $_SERVER['PHP_SELF'] ?>" method="POST">
                     <div class="mb-3">
                         <label for="password1" class="form-label">Password</label>
                         <input type="password" name="password1" class="form-control" id="password1" required="">

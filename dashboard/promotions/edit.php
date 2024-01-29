@@ -60,7 +60,7 @@
                     </ul>
                 <?php endif; ?>
                 <?php if(isset($promotion) && is_array($promotion[0])): ?>
-                <form action="/edit.php" method="POST" enctype="multipart/form-data">
+                <form action="<?= $_SERVER['PHP_SELF'] ?>" method="POST" enctype="multipart/form-data">
                     <div class="form-group mb-4">
                         <label for="title">Title</label>
                         <input type="text" name="title" value="<?= $promotion[0]['title'] ?>" id="title" class="form-control" required="">
