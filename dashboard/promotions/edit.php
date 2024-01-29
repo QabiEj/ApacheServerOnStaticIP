@@ -40,7 +40,7 @@
                     unlink('images/'.$promotion[0]['image']);
                 }
             }
-            header('Location: /dashboard/promotions/index.php?action=update&status=success');
+            header('Location: /index.php?action=update&status=success');
         } else {
             $errors = 'Something want wrong!';
         }
@@ -60,7 +60,7 @@
                     </ul>
                 <?php endif; ?>
                 <?php if(isset($promotion) && is_array($promotion[0])): ?>
-                <form action="/dashboard/promotions/edit.php" method="POST" enctype="multipart/form-data">
+                <form action="/edit.php" method="POST" enctype="multipart/form-data">
                     <div class="form-group mb-4">
                         <label for="title">Title</label>
                         <input type="text" name="title" value="<?= $promotion[0]['title'] ?>" id="title" class="form-control" required="">

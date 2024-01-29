@@ -48,13 +48,13 @@
             if($crud->update('users', $data, ['column' => 'id', 'value' => $_SESSION['id']])) {
                 if(!empty($_FILES['image']['name'])) {
                     if(move_uploaded_file($_FILES['image']['tmp_name'], 'assets/avatars/'.time().$_FILES['image']['name'])) {
-                        header('Location: /dashboard/profile.php');
+                        header('Location: /profile.php');
                     } else {
                         $errors[] = 'Something want wrong while uploading avatar image!';
                     }
                 }
 
-                header('Location: /dashboard/profile.php');
+                header('Location: /profile.php');
             } else {
                 $errors[] = 'Something want wrong!'; 
             }
@@ -108,12 +108,13 @@
     <?php endif; ?>
     <div class="container">
         <h3 class="mb-4">Profile</h3>
-        <p></p>                        <div class="card mb-4">
+        <p></p>                        
+        <div class="card mb-4">
             <div class="card-header">
                 <h5>Update</h5>
             </div>
             <div class="card-body">
-                <form action="/dashboard/profile.php" method="POST" enctype="multipart/form-data">
+                <form action="/profile.php" method="POST" enctype="multipart/form-data">
                     <div class="mb-3">
                         <label for="name" class="form-label">Name</label>
                         <input type="text" name="name" class="form-control" id="name" required="" value="<?= $user['name'] ?>">
@@ -146,7 +147,7 @@
                 <h5>Change password</h5>
             </div>
             <div class="card-body">
-                <form action="/dashboard/profile.php" method="POST">
+                <form action="/profile.php" method="POST">
                     <div class="mb-3">
                         <label for="password1" class="form-label">Password</label>
                         <input type="password" name="password1" class="form-control" id="password1" required="">

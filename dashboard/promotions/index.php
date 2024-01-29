@@ -9,7 +9,7 @@
         $promotion = $crud->read('promotions', ['column' => 'id', 'value' => $_GET['id']])[0];
         unlink('images/'.$promotion['image']);
         if($crud->delete('promotions', ['column' => 'id', 'value' => $_GET['id']])) {
-            header('Location: /dashboard/promotions/index.php');
+            header('Location: /index.php');
         }
     }
 ?>
@@ -18,7 +18,7 @@
     <div class="container">
         <h3 class="mb-4">Slides</h3>
 
-        <a href="/dashboard/promotions/create.php" class="btn btn-outline-primary mb-4">Create slide</a>
+        <a href="/create.php" class="btn btn-outline-primary mb-4">Create slide</a>
 
         <?php if($promotions && count($promotions)): ?>
         <div class="card">
@@ -55,7 +55,7 @@
                                 <td><?= $promotion['subtitle'] ?></td>
                                 <td><?= ($promotion['is_active'] === 1) ? 'Yes' : 'No' ?></td>
                                 <td>
-                                    <a href="/dashboard/promotions/edit.php?id=<?= $promotion['id'] ?>">Edit</a>
+                                    <a href="/edit.php?id=<?= $promotion['id'] ?>">Edit</a>
                                     <a href="?action=delete&id=<?= $promotion['id'] ?>" onclick="return confirm('Are you sure?')">Delete</a>
                                 </td>
                             </tr>

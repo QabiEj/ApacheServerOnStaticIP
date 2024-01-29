@@ -51,7 +51,7 @@
                     <?php endforeach; ?>
                     </ul>
                 <?php endif; ?>
-                <form action="/dashboard/products/create.php" method="POST" enctype="multipart/form-data">
+                <form action="/create.php" method="POST" enctype="multipart/form-data">
                     <div class="form-group mb-4">
                         <label for="category">Category</label>
                         <select name="category" id="category" class="form-control">

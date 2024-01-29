@@ -47,19 +47,19 @@ if(isset($_GET['action']) && ($_GET['action'] === 'logout')) {
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="/dashboard/index.php">Dashboard</a>
+                        <a class="nav-link" href="/index.php">Dashboard</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/dashboard/promotions/index.php">Promotions</a>
+                        <a class="nav-link" href="/promotions/index.php">Promotions</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/dashboard/categories/index.php">Categories</a>
+                        <a class="nav-link" href="/categories/index.php">Categories</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/dashboard/products/index.php">Products</a>
+                        <a class="nav-link" href="/products/index.php">Products</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/dashboard/orders/index.php">Orders</a>
+                        <a class="nav-link" href="/orders/index.php">Orders</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

@@ -17,7 +17,7 @@
         $_SESSION['cart'] = [];
     }
 
-    include('classes/CRUD.php');
+    include('/classes/CRUD.php');
     $crud = new CRUD;
 
 ?>

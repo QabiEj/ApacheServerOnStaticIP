@@ -13,7 +13,7 @@
         }
 
         if($crud->create('categories', ['name' => $name]) === true) {
-            header('Location: /dashboard/categories/index.php?action=create&status=success');
+            header('Location: index.php?action=create&status=success');
         } else {
             $errors = 'Something want wrong!';
         }
@@ -32,7 +32,7 @@
                     <?php endforeach; ?>
                     </ul>
                 <?php endif; ?>
-                <form action="/dashboard/categories/create.php" method="POST">
+                <form action="/create.php" method="POST">
                     <div class="form-group mb-4">
                         <label for="name">Name</label>
                         <input type="text" name="name" id="name" class="form-control" required="">

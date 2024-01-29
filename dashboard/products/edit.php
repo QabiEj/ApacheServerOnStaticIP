@@ -44,7 +44,7 @@
                     unlink('images/'.$promotion[0]['image']);
                 }
             }
-            header('Location: /dashboard/products/index.php?action=update&status=success');
+            header('Location: /index.php?action=update&status=success');
         } else {
             $errors = 'Something want wrong!';
         }
@@ -64,7 +64,7 @@
                     </ul>
                 <?php endif; ?>
                 <?php if(isset($product) && is_array($product[0])): ?>
-                <form action="/dashboard/products/edit.php" method="POST" enctype="multipart/form-data">
+                <form action="/edit.php" method="POST" enctype="multipart/form-data">
                     <div class="form-group mb-4">
                         <label for="category">Category</label>
                         <select name="category" id="category" class="form-control">

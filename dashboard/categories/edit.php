@@ -20,7 +20,7 @@
         }
 
         if($crud->update('categories', ['name' => $name], ['column' => 'id', 'value' => $id]) === true) {
-            header('Location: /dashboard/categories/index.php?action=update&status=success');
+            header('Location: /index.php?action=update&status=success');
         } else {
             $errors = 'Something want wrong!';
         }
@@ -40,7 +40,7 @@
                     </ul>
                 <?php endif; ?>
                 <?php if(isset($category) && is_array($category[0])): ?>
-                <form action="/dashboard/categories/edit.php" method="POST">
+                <form action="/edit.php" method="POST">
                     <div class="form-group mb-4">
                         <label for="name">Name</label>
                         <input type="text" name="name" id="name" value="<?= $category[0]['name'] ?>" class="form-control" required="">

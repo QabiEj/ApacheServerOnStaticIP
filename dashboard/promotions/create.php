@@ -39,7 +39,7 @@
             if(isset($image['name']) && imageIsValid($image['name'])) {
                 move_uploaded_file($image['tmp_name'], 'images/'.time().$image['name']);
             }
-            header('Location: /dashboard/promotions/index.php?action=create&status=success');
+            header('Location: /index.php?action=create&status=success');
         } else {
             $errors = 'Something want wrong!';
         }
@@ -58,7 +58,7 @@
                     <?php endforeach; ?>
                     </ul>
                 <?php endif; ?>
-                <form action="/dashboard/promotions/create.php" method="POST" enctype="multipart/form-data">
+                <form action="/create.php" method="POST" enctype="multipart/form-data">
                     <div class="form-group mb-4">
                         <label for="title">Title</label>
                         <input type="text" name="title" id="title" class="form-control" required="">
