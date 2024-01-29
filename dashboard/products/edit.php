@@ -44,7 +44,7 @@
                     unlink('images/'.$promotion[0]['image']);
                 }
             }
-            header('Location: /index.php?action=update&status=success');
+            header('Location: /dashboard/products/index.php?action=update&status=success');
         } else {
             $errors = 'Something want wrong!';
         }

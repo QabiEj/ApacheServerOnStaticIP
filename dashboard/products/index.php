@@ -9,7 +9,7 @@
         $product = $crud->read('products', ['column' => 'id', 'value' => $_GET['id']])[0];
         unlink('images/'.$product['image']);
         if($crud->delete('products', ['column' => 'id', 'value' => $_GET['id']])) {
-            header('Location: /index.php');
+            header('Location: /dashboard/products/index.php');
         }
     }
 ?>
@@ -17,7 +17,7 @@
 <div class="dashboard my-5">
     <div class="container">
         <h3 class="mb-4">Products</h3>
-        <a href="/create.php" class="btn btn-outline-primary mb-4">Create product</a>
+        <a href="/dashboard/products/create.php" class="btn btn-outline-primary mb-4">Create product</a>
         <?php if($products && count($products)): ?>
         <div class="card">
             <div class="card-body">
@@ -51,7 +51,7 @@
                                 <td><?= $product['name'] ?></td>
                                 <td><?= $product['price'] ?></td>
                                 <td>
-                                    <a href="/edit.php?id=<?= $product['id'] ?>">Edit</a>
+                                    <a href="/dashboard/products/edit.php?id=<?= $product['id'] ?>">Edit</a>
                                     <a href="?action=delete&id=<?= $product['id'] ?>" onclick="return confirm('Are you sure?')">Delete</a>
                                 </td>
                             </tr>

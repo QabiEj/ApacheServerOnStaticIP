@@ -67,7 +67,7 @@
                         <?php endforeach; ?>
                         </ul>
                     <?php endif; ?>
-                    <form action="register.php" method="POST">
+                    <form action="/register.php" method="POST">
                         <div class="form-group">
                             <label for="fullname my-2">Fullname</label>
                             <input type="text" name="fullname" id="fullname" class="form-control" placeholder="Enter your name and surname" />

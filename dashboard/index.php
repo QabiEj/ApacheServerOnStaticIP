@@ -37,7 +37,7 @@ if(isset($_SESSION['role'])) {
                     <div class="card-body">
                         <h2><?= $promotions ?></h2>
                         <p>Promotions</p>
-                        <a href="/promotions/" class="btn btn-sm btn-outline-secondary">Manage</a>
+                        <a href="dashboard/promotions/index.php" class="btn btn-sm btn-outline-secondary">Manage</a>
                     </div>
                 </div>
             </div> 
@@ -49,7 +49,7 @@ if(isset($_SESSION['role'])) {
                     <div class="card-body">
                         <h2><?= $categories ?></h2>
                         <p>Categories</p>
-                        <a href="/categories/" class="btn btn-sm btn-outline-secondary">Manage</a>
+                        <a href="dashboard/categories/index.php" class="btn btn-sm btn-outline-secondary">Manage</a>
                     </div>
                 </div>
             </div>
@@ -61,7 +61,7 @@ if(isset($_SESSION['role'])) {
                     <div class="card-body">
                         <h2><?= $products ?></h2>
                         <p>Products</p>
-                        <a href="/products/" class="btn btn-sm btn-outline-secondary">Manage</a>
+                        <a href="/dashboard/products/index.php" class="btn btn-sm btn-outline-secondary">Manage</a>
                     </div>
                 </div>
             </div>
@@ -72,7 +72,7 @@ if(isset($_SESSION['role'])) {
                     <div class="card-body">
                         <h2><?= $orders ?></h2>
                         <p>Orders</p>
-                        <a href="/orders/" class="btn btn-sm btn-outline-secondary">Manage</a>
+                        <a href="/dashboard/orders/index.php" class="btn btn-sm btn-outline-secondary">Manage</a>
                     </div>
                 </div>
             </div>

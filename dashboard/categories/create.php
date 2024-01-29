@@ -13,7 +13,7 @@
         }
 
         if($crud->create('categories', ['name' => $name]) === true) {
-            header('Location: /index.php?action=create&status=success');
+            header('Location: /dashboard/categories/index.php?action=create&status=success');
         } else {
             $errors = 'Something want wrong!';
         }

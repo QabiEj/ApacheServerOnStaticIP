@@ -20,7 +20,7 @@
         }
 
         if($crud->update('categories', ['name' => $name], ['column' => 'id', 'value' => $id]) === true) {
-            header('Location: /index.php?action=update&status=success');
+            header('Location: /dashboard/categories/index.php?action=update&status=success');
         } else {
             $errors = 'Something want wrong!';
         }

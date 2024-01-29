@@ -2,8 +2,8 @@
 session_start();
 
 $customer_pages = [
-    '/e-commerce/dashboard/index.php',
-    '/e-commerce/dashboard/orders/index.php'
+    '/dashboard/index.php',
+    '/dashboard/orders/index.php'
 ];
 
 $current_page = $_SERVER['SCRIPT_NAME'];
@@ -50,16 +50,16 @@ if(isset($_GET['action']) && ($_GET['action'] === 'logout')) {
                         <a class="nav-link" href="/dashboard/index.php">Dashboard</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/dashboard/promotions/">Promotions</a>
+                        <a class="nav-link" href="/dashboard/promotions/index.php">Promotions</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/dashboard/categories/">Categories</a>
+                        <a class="nav-link" href="/dashboard/categories/index.php">Categories</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/dashboard/products/">Products</a>
+                        <a class="nav-link" href="/dashboard/products/index.php">Products</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/dashboard/orders/">Orders</a>
+                        <a class="nav-link" href="/dashboard/orders/index.php">Orders</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

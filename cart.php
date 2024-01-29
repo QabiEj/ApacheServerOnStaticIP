@@ -101,7 +101,7 @@ if (isset($_GET['action']) && ($_GET['action'] === 'plus')) {
         </div>
         <div>
             <?php if (isset($_SESSION['is_loggedin']) && ($_SESSION['is_loggedin'] == 1)): ?>
-                <a href="checkout.php" class="btn btn-sm btn-outline-primary">Check out</a>
+                <a href="/checkout.php" class="btn btn-sm btn-outline-primary">Check out</a>
             <?php else: ?>
                 Please <a href="/login.php">login</a> first
             <?php endif; ?>
