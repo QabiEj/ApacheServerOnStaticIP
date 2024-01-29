@@ -1,6 +1,5 @@
 <?php 
 include('includes/header.php'); 
-
 include('../classes/CRUD.php');
 $crud = new CRUD;
 
@@ -37,7 +36,7 @@ if(isset($_SESSION['role'])) {
                     <div class="card-body">
                         <h2><?= $promotions ?></h2>
                         <p>Promotions</p>
-                        <a href="/promotions/index.php" class="btn btn-sm btn-outline-secondary">Manage</a>
+                        <a href="/promotions/" class="btn btn-sm btn-outline-secondary">Manage</a>
                     </div>
                 </div>
             </div> 
@@ -49,7 +48,7 @@ if(isset($_SESSION['role'])) {
                     <div class="card-body">
                         <h2><?= $categories ?></h2>
                         <p>Categories</p>
-                        <a href="/categories/index.php" class="btn btn-sm btn-outline-secondary">Manage</a>
+                        <a href="/categories/" class="btn btn-sm btn-outline-secondary">Manage</a>
                     </div>
                 </div>
             </div>
@@ -61,7 +60,7 @@ if(isset($_SESSION['role'])) {
                     <div class="card-body">
                         <h2><?= $products ?></h2>
                         <p>Products</p>
-                        <a href="/products/index.php" class="btn btn-sm btn-outline-secondary">Manage</a>
+                        <a href="/products/" class="btn btn-sm btn-outline-secondary">Manage</a>
                     </div>
                 </div>
             </div>
@@ -72,7 +71,7 @@ if(isset($_SESSION['role'])) {
                     <div class="card-body">
                         <h2><?= $orders ?></h2>
                         <p>Orders</p>
-                        <a href="/orders/index.php" class="btn btn-sm btn-outline-secondary">Manage</a>
+                        <a href="/orders/" class="btn btn-sm btn-outline-secondary">Manage</a>
                     </div>
                 </div>
             </div>

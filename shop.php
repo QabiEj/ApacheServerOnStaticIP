@@ -27,7 +27,7 @@
             </div>
             <div>
                 <!-- localhost/shop.php?filter=price_asc -->
-                <form action="/shop.php" id="filter-form">
+                <form action="shop.php" id="filter-form">
                     <select name="filter" id="filter" class="form-control">
                         <option value="">Filter products &darr;</option>
                         <option value="name_asc" <?= (isset($_GET['filter']) && ($_GET['filter']==='name_asc')) ? 'selected' : '' ?>>Name ASC</option>
@@ -43,7 +43,7 @@
             <?php foreach($products as $product): ?>
                 <div class="col-lg-3 col-md-3 col-sm-12">
                 <div class="card" style="width: 18rem;">
-                    <img src="/dashboard/products/images/<?= $product['image'] ?>" class="product-image" alt="<?= $product['name'] ?>">
+                    <img src="dashboard/products/images/<?= $product['image'] ?>" class="product-image" alt="<?= $product['name'] ?>">
                     <div class="card-body">
                         <h5 class="card-title"><?= $product['name'] ?></h5>
                         <p class="card-text card-text-product">

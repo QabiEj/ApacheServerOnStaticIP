@@ -151,7 +151,7 @@ if (isset($_POST['checkout_btn'])) {
                 </form>
                 <br>
                 <div>
-                    <form action="/charge.php" method="post">
+                    <form action="charge.php" method="post">
                         <input type="text" name="amount" value="<?= $totalPrice ?>" readonly />
                         <input type="submit" name="submit" value="Pay With Paypal">
                     </form>
